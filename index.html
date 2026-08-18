@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafios Matemáticos: Estudo das Funções</title>
+    <title>Domine o universo das funções</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .fade-in { animation: fadeIn 0.5s ease-in-out; }
@@ -44,14 +44,14 @@
         .theme-logaritmica { --theme-color: #F97316; --theme-bg: #FFF7ED; --theme-border: #FDBA74; }
     </style>
 </head>
-<body class="bg-gray-50 min-h-screen font-sans text-gray-800 flex items-center justify-center p-4 selection:bg-gray-200">
+<body id="main-body" class="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-950 min-h-screen font-sans text-gray-800 flex items-center justify-center p-4 selection:bg-yellow-200 selection:text-slate-900 transition-colors duration-500">
 
-    <div class="max-w-4xl w-full bg-white rounded-2xl shadow-xl overflow-hidden fade-in">
+    <div class="max-w-4xl w-full bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden fade-in border border-white/20">
         
         <!-- Global Header -->
-        <header id="main-header" class="bg-slate-800 text-white p-6 text-center transition-colors duration-500">
-            <h1 id="header-title" class="text-3xl font-bold mb-2">Portal de Matemática</h1>
-            <p id="header-subtitle" class="text-slate-300">Domine o universo das Funções!</p>
+        <header id="main-header" class="relative bg-slate-900">
+            <img id="header-img" src="funcoes.png" alt="Domine o Universo das Funções" class="w-full h-auto max-h-80 object-cover object-top border-b-4 border-yellow-400 transition-colors duration-500">
+            <h1 class="sr-only">Domine o universo das funções</h1>
         </header>
 
         <div class="p-6 md:p-8">
@@ -59,65 +59,63 @@
             <!-- Screen 1: Main Menu -->
             <div id="menu-screen" class="block">
                 <div class="text-center mb-8">
-                    <h2 class="text-2xl font-semibold mb-2">Identifique-se para jogar</h2>
-                    <p class="text-gray-500 mb-6">Seus pontos serão registrados no ranking do tema escolhido.</p>
-                    <input type="text" id="player-name" placeholder="Digite seu nome (Ex: João, Maria)" class="w-full max-w-md px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-200 transition-colors mb-8 text-center text-lg font-medium" maxlength="20">
+                    <h2 class="text-2xl font-bold mb-2 text-slate-800">Identifique-se, explorador!</h2>
+                    <p class="text-gray-500 mb-6 font-medium">Seus pontos serão registrados no ranking do tema escolhido.</p>
+                    <input type="text" id="player-name" placeholder="Digite seu nome (Ex: João, Maria)" class="w-full max-w-md px-4 py-3 rounded-xl border-2 border-slate-300 focus:border-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-200/50 transition-all mb-8 text-center text-lg font-bold text-slate-700 shadow-inner" maxlength="20">
                 </div>
-
-                <h3 class="text-xl font-bold text-center text-gray-700 mb-6">Escolha o seu Desafio</h3>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <!-- Afim -->
-                    <button onclick="startGame('afim')" class="topic-btn group relative overflow-hidden rounded-xl border-2 border-blue-200 bg-blue-50 p-6 text-left hover:bg-blue-100 hover:border-blue-400 transition-all disabled:opacity-50 disabled:cursor-not-allowed">
+                    <button onclick="startGame('afim')" class="topic-btn group relative overflow-hidden rounded-2xl border-b-4 border-blue-800 bg-blue-500 p-6 text-left hover:bg-blue-400 hover:border-blue-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg">
                         <div class="flex items-center justify-between mb-2">
-                            <h4 class="text-xl font-bold text-blue-700">Função Afim (1º Grau)</h4>
-                            <span class="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">1</span>
+                            <h4 class="text-2xl font-black text-white drop-shadow-md uppercase tracking-wide">Função Afim</h4>
+                            <span class="bg-blue-800 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-inner">1</span>
                         </div>
-                        <p class="text-sm text-blue-600 opacity-80">Reta, coeficientes angular e linear, raízes e aplicações.</p>
+                        <p class="text-sm text-blue-100 font-medium">Reta, coeficientes angular e linear, raízes e aplicações.</p>
                     </button>
 
                     <!-- Quadrática -->
-                    <button onclick="startGame('quadratica')" class="topic-btn group relative overflow-hidden rounded-xl border-2 border-green-200 bg-green-50 p-6 text-left hover:bg-green-100 hover:border-green-400 transition-all disabled:opacity-50 disabled:cursor-not-allowed">
+                    <button onclick="startGame('quadratica')" class="topic-btn group relative overflow-hidden rounded-2xl border-b-4 border-green-800 bg-green-500 p-6 text-left hover:bg-green-400 hover:border-green-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg">
                         <div class="flex items-center justify-between mb-2">
-                            <h4 class="text-xl font-bold text-green-700">Função Quadrática</h4>
-                            <span class="bg-green-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">2</span>
+                            <h4 class="text-2xl font-black text-white drop-shadow-md uppercase tracking-wide">Quadrática</h4>
+                            <span class="bg-green-800 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-inner">2</span>
                         </div>
-                        <p class="text-sm text-green-600 opacity-80">Parábola, vértices, Bhaskara, máximos e mínimos.</p>
+                        <p class="text-sm text-green-100 font-medium">Parábola, vértices, Bhaskara, máximos e mínimos.</p>
                     </button>
 
                     <!-- Exponencial -->
-                    <button onclick="startGame('exponencial')" class="topic-btn group relative overflow-hidden rounded-xl border-2 border-purple-200 bg-purple-50 p-6 text-left hover:bg-purple-100 hover:border-purple-400 transition-all disabled:opacity-50 disabled:cursor-not-allowed">
+                    <button onclick="startGame('exponencial')" class="topic-btn group relative overflow-hidden rounded-2xl border-b-4 border-purple-800 bg-purple-500 p-6 text-left hover:bg-purple-400 hover:border-purple-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg">
                         <div class="flex items-center justify-between mb-2">
-                            <h4 class="text-xl font-bold text-purple-700">Função Exponencial</h4>
-                            <span class="bg-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">3</span>
+                            <h4 class="text-2xl font-black text-white drop-shadow-md uppercase tracking-wide">Exponencial</h4>
+                            <span class="bg-purple-800 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-inner">3</span>
                         </div>
-                        <p class="text-sm text-purple-600 opacity-80">Crescimento acelerado, decaimento, juros compostos.</p>
+                        <p class="text-sm text-purple-100 font-medium">Crescimento acelerado, decaimento, juros compostos.</p>
                     </button>
 
                     <!-- Logarítmica -->
-                    <button onclick="startGame('logaritmica')" class="topic-btn group relative overflow-hidden rounded-xl border-2 border-orange-200 bg-orange-50 p-6 text-left hover:bg-orange-100 hover:border-orange-400 transition-all disabled:opacity-50 disabled:cursor-not-allowed">
+                    <button onclick="startGame('logaritmica')" class="topic-btn group relative overflow-hidden rounded-2xl border-b-4 border-orange-700 bg-orange-500 p-6 text-left hover:bg-orange-400 hover:border-orange-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg">
                         <div class="flex items-center justify-between mb-2">
-                            <h4 class="text-xl font-bold text-orange-700">Função Logarítmica</h4>
-                            <span class="bg-orange-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">4</span>
+                            <h4 class="text-2xl font-black text-white drop-shadow-md uppercase tracking-wide">Logarítmica</h4>
+                            <span class="bg-orange-700 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-inner">4</span>
                         </div>
-                        <p class="text-sm text-orange-600 opacity-80">Propriedades, equações, base e inverso da exponencial.</p>
+                        <p class="text-sm text-orange-100 font-medium">Propriedades, equações, base e inverso da exponencial.</p>
                     </button>
                 </div>
             </div>
 
             <!-- Screen 2: Game Area -->
             <div id="game-screen" class="hidden">
-                <div class="flex justify-between items-center mb-6 text-sm font-semibold uppercase tracking-wide">
-                    <button onclick="returnToMenu()" class="text-gray-500 hover:text-gray-800 flex items-center">
-                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-                        Voltar
+                <div class="flex justify-between items-center mb-6 text-sm font-bold uppercase tracking-wider">
+                    <button onclick="returnToMenu()" class="text-gray-500 hover:text-gray-800 flex items-center transition-colors">
+                        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                        Abandonar
                     </button>
-                    <span id="question-tracker" class="text-gray-500">Pergunta 1/10</span>
-                    <span id="score-tracker" class="font-bold">Pontuação: 0</span>
+                    <span id="question-tracker" class="text-slate-400 bg-slate-100 px-3 py-1 rounded-full">Pergunta 1/10</span>
+                    <span id="score-tracker" class="text-slate-700">Pontuação: 0</span>
                 </div>
                 
                 <div class="mb-8">
-                    <h3 id="question-text" class="text-xl md:text-2xl font-bold text-gray-800 leading-tight mb-6 slide-up">
+                    <h3 id="question-text" class="text-xl md:text-2xl font-black text-slate-800 leading-tight mb-6 slide-up drop-shadow-sm">
                         <!-- Question text -->
                     </h3>
                     
@@ -127,8 +125,8 @@
                 </div>
 
                 <div class="flex justify-end">
-                    <button id="next-btn" class="hidden text-white font-bold py-3 px-8 rounded-lg transition-colors shadow-md">
-                        Próxima Pergunta ➔
+                    <button id="next-btn" class="hidden text-white font-black py-3 px-8 rounded-xl transition-all shadow-lg hover:-translate-y-1">
+                        Próxima Missão ➔
                     </button>
                 </div>
             </div>
@@ -136,29 +134,29 @@
             <!-- Screen 3: Results & Leaderboard -->
             <div id="result-screen" class="hidden text-center">
                 <div class="mb-8">
-                    <h2 class="text-3xl font-bold mb-2">Desafio Concluído!</h2>
-                    <p class="text-gray-600 text-lg mb-4">Parabéns, <span id="final-name" class="font-semibold"></span>!</p>
-                    <div class="inline-block border rounded-full px-8 py-4 mb-6 shadow-sm" id="score-badge">
-                        <span class="text-gray-600 uppercase font-semibold text-sm tracking-wider block mb-1">Pontuação Final</span>
-                        <span id="final-score" class="text-5xl font-extrabold">0</span><span class="text-gray-500 font-medium">/100</span>
+                    <h2 class="text-4xl font-black mb-2 text-slate-800 drop-shadow-sm">Desafio Concluído!</h2>
+                    <p class="text-gray-500 text-xl mb-6 font-medium">Excelente trabalho, <span id="final-name" class="font-bold text-slate-700"></span>!</p>
+                    <div class="inline-block border-4 rounded-3xl px-10 py-6 mb-6 shadow-lg transform hover:scale-105 transition-transform" id="score-badge">
+                        <span class="uppercase font-black text-sm tracking-widest block mb-2 opacity-80">Pontuação Final</span>
+                        <span id="final-score" class="text-6xl font-black drop-shadow-md">0</span><span class="text-xl font-bold opacity-60">/100</span>
                     </div>
                 </div>
 
-                <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 mb-8 max-w-lg mx-auto">
-                    <h3 class="text-xl font-bold mb-4 flex items-center justify-center text-gray-800">
-                        <svg class="w-6 h-6 mr-2 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <div class="bg-slate-50 rounded-2xl p-6 border-2 border-slate-200 mb-8 max-w-lg mx-auto shadow-inner">
+                    <h3 class="text-xl font-black mb-4 flex items-center justify-center text-slate-800 uppercase tracking-wide">
+                        <svg class="w-7 h-7 mr-2 text-yellow-500 drop-shadow-sm" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                         Top 10 - <span id="leaderboard-title">Tema</span>
                     </h3>
-                    <ul id="leaderboard-list" class="text-left space-y-2">
+                    <ul id="leaderboard-list" class="text-left space-y-3">
                         <!-- Leaderboard items -->
                     </ul>
                 </div>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button onclick="playAgain()" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-8 rounded-lg transition-colors text-lg shadow-sm">
+                    <button onclick="playAgain()" class="bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold py-4 px-8 rounded-xl transition-all text-lg shadow-md border-b-4 border-slate-400 hover:border-slate-500">
                         Jogar Tema Novamente
                     </button>
-                    <button onclick="returnToMenu()" id="back-menu-btn" class="text-white font-bold py-3 px-8 rounded-lg transition-colors text-lg shadow-md">
+                    <button onclick="returnToMenu()" id="back-menu-btn" class="text-white font-bold py-4 px-8 rounded-xl transition-all text-lg shadow-md border-b-4">
                         Voltar ao Menu Principal
                     </button>
                 </div>
@@ -337,7 +335,7 @@
         
         const nameInput = document.getElementById('player-name');
         const topicBtns = document.querySelectorAll('.topic-btn');
-        const header = document.getElementById('main-header');
+        const headerImg = document.getElementById('header-img');
         
         const questionText = document.getElementById('question-text');
         const optionsContainer = document.getElementById('options-container');
@@ -380,14 +378,15 @@
             
             // Set Theme
             const meta = topicMeta[topic];
-            document.body.className = `bg-gray-50 min-h-screen font-sans text-gray-800 flex items-center justify-center p-4 selection:bg-gray-200 ${meta.theme}`;
-            header.className = `p-6 text-center transition-colors duration-500 bg-${meta.btnColor}-600 text-white`;
+            
+            // Match the dynamic border of the image to the topic
+            headerImg.className = `w-full h-auto max-h-80 object-cover object-top border-b-4 border-${meta.btnColor}-500 transition-colors duration-500`;
             
             // Apply theme color to Next button and Back Menu button
-            nextBtn.className = `hidden text-white font-bold py-3 px-8 rounded-lg transition-colors shadow-md bg-${meta.btnColor}-600 hover:bg-${meta.btnColor}-700`;
-            backMenuBtn.className = `text-white font-bold py-3 px-8 rounded-lg transition-colors text-lg shadow-md bg-${meta.btnColor}-600 hover:bg-${meta.btnColor}-700`;
-            scoreBadge.className = `inline-block border rounded-full px-8 py-4 mb-6 shadow-sm bg-${meta.btnColor}-50 border-${meta.btnColor}-200`;
-            resultScore.className = `text-5xl font-extrabold text-${meta.btnColor}-600`;
+            nextBtn.className = `hidden text-white font-black py-4 px-8 rounded-xl transition-all shadow-lg hover:-translate-y-1 bg-${meta.btnColor}-600 hover:bg-${meta.btnColor}-500 border-b-4 border-${meta.btnColor}-800`;
+            backMenuBtn.className = `text-white font-bold py-4 px-8 rounded-xl transition-all text-lg shadow-md border-b-4 bg-${meta.btnColor}-600 hover:bg-${meta.btnColor}-500 border-${meta.btnColor}-800`;
+            scoreBadge.className = `inline-block border-4 rounded-3xl px-10 py-6 mb-6 shadow-lg transform hover:scale-105 transition-transform bg-${meta.btnColor}-50 border-${meta.btnColor}-300`;
+            resultScore.className = `text-6xl font-black drop-shadow-md text-${meta.btnColor}-600`;
 
             // Shuffle and pick 10 questions from the selected topic
             const allTopicQs = [...questionBanks[topic]];
@@ -404,9 +403,8 @@
         }
 
         function returnToMenu() {
-            // Reset to default theme
-            document.body.className = "bg-gray-50 min-h-screen font-sans text-gray-800 flex items-center justify-center p-4 selection:bg-gray-200";
-            header.className = "bg-slate-800 text-white p-6 text-center transition-colors duration-500";
+            // Reset to default theme for image border
+            headerImg.className = "w-full h-auto max-h-80 object-cover object-top border-b-4 border-yellow-400 transition-colors duration-500";
             
             showScreen('menu');
         }
@@ -430,15 +428,15 @@
             optionsContainer.innerHTML = '';
             nextBtn.classList.add('hidden');
 
-            const themeColorClass = `hover:border-${topicMeta[currentTopic].btnColor}-500 hover:bg-${topicMeta[currentTopic].btnColor}-50`;
+            const themeColorClass = `hover:border-${topicMeta[currentTopic].btnColor}-400 hover:bg-${topicMeta[currentTopic].btnColor}-50`;
 
             q.options.forEach((opt, index) => {
                 const btn = document.createElement('button');
-                btn.className = `option-btn w-full text-left p-4 rounded-xl border-2 border-gray-200 focus:outline-none font-medium text-gray-700 slide-up ${themeColorClass}`;
+                btn.className = `option-btn w-full text-left p-5 rounded-xl border-2 border-slate-200 focus:outline-none font-bold text-slate-700 text-lg slide-up bg-white shadow-sm ${themeColorClass}`;
                 btn.style.animationDelay = `${index * 0.1}s`;
                 
                 const letter = String.fromCharCode(65 + index);
-                btn.innerHTML = `<span class="inline-block w-8 font-bold text-gray-400">${letter}.</span> ${opt}`;
+                btn.innerHTML = `<span class="inline-block w-8 font-black text-slate-400">${letter}.</span> ${opt}`;
                 
                 btn.onclick = () => selectOption(index, btn);
                 optionsContainer.appendChild(btn);
@@ -515,29 +513,29 @@
             const currentBoard = leaderboards[currentTopic];
             
             if (currentBoard.length === 0) {
-                leaderboardList.innerHTML = '<li class="text-gray-500 text-center py-4">Nenhuma pontuação registrada ainda. Seja o primeiro!</li>';
+                leaderboardList.innerHTML = '<li class="text-slate-500 font-medium text-center py-4">Nenhuma pontuação registrada ainda. Seja o primeiro!</li>';
                 return;
             }
 
             currentBoard.forEach((entry, index) => {
                 const li = document.createElement('li');
                 
-                let rankClass = "bg-white text-gray-700 border-gray-100";
-                let icon = `<span class="w-8 text-center font-bold text-gray-400">${index + 1}º</span>`;
+                let rankClass = "bg-white text-slate-700 border-slate-200";
+                let icon = `<span class="w-8 text-center font-black text-slate-400">${index + 1}º</span>`;
                 
-                if (index === 0) { rankClass = "bg-yellow-50 text-yellow-800 border-yellow-200 font-bold"; icon = '🏆'; } 
-                else if (index === 1) { rankClass = "bg-slate-100 text-slate-800 border-slate-300 font-semibold"; icon = '🥈'; } 
-                else if (index === 2) { rankClass = "bg-orange-50 text-orange-800 border-orange-200 font-semibold"; icon = '🥉'; }
+                if (index === 0) { rankClass = "bg-yellow-50 text-yellow-800 border-yellow-300 font-black"; icon = '🏆'; } 
+                else if (index === 1) { rankClass = "bg-slate-100 text-slate-800 border-slate-300 font-bold"; icon = '🥈'; } 
+                else if (index === 2) { rankClass = "bg-orange-50 text-orange-800 border-orange-300 font-bold"; icon = '🥉'; }
 
-                li.className = `flex justify-between items-center p-3 rounded-lg border ${rankClass} shadow-sm`;
+                li.className = `flex justify-between items-center p-4 rounded-xl border-2 ${rankClass} shadow-sm`;
                 li.innerHTML = `
                     <div class="flex items-center">
-                        <span class="mr-3 w-8 text-center text-lg">${icon}</span>
-                        <span class="truncate max-w-[140px] sm:max-w-[220px]">${entry.name}</span>
+                        <span class="mr-3 w-8 text-center text-xl">${icon}</span>
+                        <span class="truncate max-w-[140px] sm:max-w-[220px] text-lg">${entry.name}</span>
                     </div>
                     <div class="flex items-center gap-3">
-                        <span class="text-xs opacity-60 hidden sm:inline">${entry.date}</span>
-                        <span class="font-bold text-lg">${entry.score} pts</span>
+                        <span class="text-xs opacity-60 font-semibold hidden sm:inline">${entry.date}</span>
+                        <span class="font-black text-xl">${entry.score} pts</span>
                     </div>
                 `;
                 leaderboardList.appendChild(li);
