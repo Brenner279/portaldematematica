@@ -381,8 +381,8 @@
             const meta = topicMeta[topic];
             
             // Match the dynamic border of the image to the topic
-            headerImg.className = `w-full h-auto max-h-80 object-cover object-top border-b-4 border-${meta.btnColor}-500 transition-colors duration-500`;
-            
+            headerImg.className = `w-full h-auto border-b-4 border-${meta.btnColor}-500 transition-colors duration-500`;
+                        
             // Apply theme color to Next button and Back Menu button
             nextBtn.className = `hidden text-white font-black py-4 px-8 rounded-xl transition-all shadow-lg hover:-translate-y-1 bg-${meta.btnColor}-600 hover:bg-${meta.btnColor}-500 border-b-4 border-${meta.btnColor}-800`;
             backMenuBtn.className = `text-white font-bold py-4 px-8 rounded-xl transition-all text-lg shadow-md border-b-4 bg-${meta.btnColor}-600 hover:bg-${meta.btnColor}-500 border-${meta.btnColor}-800`;
